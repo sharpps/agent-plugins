@@ -1,2 +1,5 @@
 artifacts/*
 /scripts/package-plugins.sh
+
+__pycache__/
+*.pyc
