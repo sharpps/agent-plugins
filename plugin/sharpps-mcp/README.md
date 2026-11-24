@@ -31,7 +31,7 @@ The four `cloud.sharpps.dpdns.org` servers (Chrome, Shells, Attendance, Trading)
 Claude Code, Codex, Cursor, Grok: install the plugin from this marketplace; the MCP server comes with it.
 
 ```
-/plugin marketplace add gweone/agent-plugins
+/plugin marketplace add sharpps/agent-plugins
 /plugin install sharpps-mcp@sharpps-plugins
 ```
 

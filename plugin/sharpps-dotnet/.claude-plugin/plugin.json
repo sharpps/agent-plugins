@@ -6,6 +6,6 @@
   "author": {
     "name": "SharpPS"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-dotnet",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-dotnet",
   "license": "MIT"
 }

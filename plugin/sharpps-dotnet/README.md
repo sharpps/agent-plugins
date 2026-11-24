@@ -1,6 +1,6 @@
 # sharpps-dotnet
 
-.NET tooling knowledge for solutions built on the [SharpPS](https://github.com/gweone) framework.
+.NET tooling knowledge for solutions built on the [SharpPS](https://github.com/sharpps) framework.
 
 ## Skills
 

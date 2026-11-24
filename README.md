@@ -11,7 +11,7 @@ A multi-agent plugin marketplace (Claude Code, Codex/ChatGPT, Cursor, Grok, Open
 Add this marketplace, then install a plugin from it:
 
 ```
-/plugin marketplace add gweone/agent-plugins
+/plugin marketplace add sharpps/agent-plugins
 /plugin install sharpps-sitecore@sharpps-plugins
 /plugin install sharpps-liferay@sharpps-plugins
 /plugin install sharpps-dotnet@sharpps-plugins
@@ -95,7 +95,7 @@ Each host package only references that tree:
 
 | Host | Entry |
 |------|--------|
-| Claude Code | `/plugin marketplace add gweone/agent-plugins` |
+| Claude Code | `/plugin marketplace add sharpps/agent-plugins` |
 | Codex / ChatGPT | `.agents/plugins/marketplace.json` (`path: ./plugin/<name>`) |
 | Cursor | `.cursor-plugin/marketplace.json` |
 | Grok | per-plugin `.grok-plugin/plugin.json` |

@@ -1,6 +1,6 @@
 # sharpps-sitecore
 
-Sitecore/SXA knowledge for solutions built on the [SharpPS](https://github.com/gweone) framework.
+Sitecore/SXA knowledge for solutions built on the [SharpPS](https://github.com/sharpps) framework.
 
 ## Skills
 

@@ -1,6 +1,6 @@
 # sharpps-work
 
-General office/documentation tooling for solutions built on the [SharpPS](https://github.com/gweone) framework — not tied to any one platform, unlike this marketplace's other plugins.
+General office/documentation tooling for solutions built on the [SharpPS](https://github.com/sharpps) framework — not tied to any one platform, unlike this marketplace's other plugins.
 
 ## Skills
 

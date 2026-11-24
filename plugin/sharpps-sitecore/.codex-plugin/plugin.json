@@ -4,10 +4,10 @@
   "description": "Sitecore/SXA knowledge for SharpPS solutions: SPE/Shells for publish and Unicorn, SXA search (/sxa/search/*), Feature/Foundation projects, Controller Renderings with custom .cshtml paths, datasource-driven HTML, CorePipeline processors, idempotent SQL scripts for Database/Database.Tools, and HTTP database access via DatabaseController.",
   "author": {
     "name": "SharpPS",
-    "url": "https://github.com/gweone/agent-plugins"
+    "url": "https://github.com/sharpps/agent-plugins"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-sitecore",
-  "repository": "https://github.com/gweone/agent-plugins",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-sitecore",
+  "repository": "https://github.com/sharpps/agent-plugins",
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for Sitecore",
@@ -15,7 +15,7 @@
     "longDescription": "Sitecore/SXA knowledge for SharpPS solutions: SPE/Shells for publish and Unicorn, SXA search (/sxa/search/*), Feature/Foundation projects, Controller Renderings with custom .cshtml paths, datasource-driven HTML, CorePipeline processors, idempotent SQL scripts for Database/Database.Tools, and HTTP database access via DatabaseController.",
     "developerName": "SharpPS",
     "category": "Development",
-    "websiteURL": "https://github.com/gweone/agent-plugins",
+    "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-mcp",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"

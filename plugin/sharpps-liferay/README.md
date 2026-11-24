@@ -1,6 +1,6 @@
 # sharpps-liferay
 
-Liferay knowledge and workflow tooling for solutions built on the [SharpPS](https://github.com/gweone) framework.
+Liferay knowledge and workflow tooling for solutions built on the [SharpPS](https://github.com/sharpps) framework.
 
 ## Skills
 

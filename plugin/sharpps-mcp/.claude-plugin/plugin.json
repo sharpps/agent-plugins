@@ -6,7 +6,7 @@
   "author": {
     "name": "SharpPS"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-mcp",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-mcp",
   "mcpServers": "./.mcp.json",
   "privacyPolicyUrl": "https://sharpps.dpdns.org/privacy-mcp",
   "license": "MIT"

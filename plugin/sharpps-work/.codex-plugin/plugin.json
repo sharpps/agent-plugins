@@ -4,10 +4,10 @@
   "description": "Office and documentation tooling for SharpPS: headless screenshots of authenticated apps (including multi-tenant/local domains), OpenXML Word (.docx) via python-docx, codebase-memory-mcp knowledge graphs, short Findings/Feedback/Conclusion docs, Chrome DevTools MCP page debugging, and Playwright CLI QA testing.",
   "author": {
     "name": "SharpPS",
-    "url": "https://github.com/gweone/agent-plugins"
+    "url": "https://github.com/sharpps/agent-plugins"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-work",
-  "repository": "https://github.com/gweone/agent-plugins",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-work",
+  "repository": "https://github.com/sharpps/agent-plugins",
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for Work",
@@ -15,7 +15,7 @@
     "longDescription": "Office and documentation tooling for SharpPS: headless screenshots of authenticated apps (including multi-tenant/local domains), OpenXML Word (.docx) via python-docx, codebase-memory-mcp knowledge graphs, short Findings/Feedback/Conclusion docs, Chrome DevTools MCP page debugging, and Playwright CLI QA testing.",
     "developerName": "SharpPS",
     "category": "Productivity",
-    "websiteURL": "https://github.com/gweone/agent-plugins",
+    "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-mcp",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"

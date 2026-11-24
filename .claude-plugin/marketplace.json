@@ -29,7 +29,7 @@
       },
       "category": "development",
       "source": "./plugin/sharpps-sitecore",
-      "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-sitecore",
+      "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-sitecore",
       "license": "MIT"
     },
     {
@@ -42,7 +42,7 @@
       },
       "category": "development",
       "source": "./plugin/sharpps-liferay",
-      "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-liferay",
+      "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-liferay",
       "license": "MIT"
     },
     {
@@ -55,7 +55,7 @@
       },
       "category": "development",
       "source": "./plugin/sharpps-dotnet",
-      "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-dotnet",
+      "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-dotnet",
       "license": "MIT"
     },
     {
@@ -68,7 +68,7 @@
       },
       "category": "development",
       "source": "./plugin/sharpps-work",
-      "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-work",
+      "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-work",
       "license": "MIT"
     },
     {
@@ -81,7 +81,7 @@
       },
       "category": "development",
       "source": "./plugin/sharpps-mcp",
-      "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-mcp",
+      "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-mcp",
       "license": "MIT"
     }
   ],

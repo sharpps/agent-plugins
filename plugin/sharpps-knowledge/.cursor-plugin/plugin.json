@@ -5,7 +5,7 @@
   "author": {
     "name": "SharpPS"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-knowledge",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-knowledge",
   "mcpServers": "./.mcp.json",
   "skills": "./skills/",
   "agents": [
@@ -19,6 +19,6 @@
     "cursor"
   ],
   "license": "MIT",
-  "repository": "https://github.com/gweone/agent-plugins",
+  "repository": "https://github.com/sharpps/agent-plugins",
   "logo": "assets/icon.png"
 }

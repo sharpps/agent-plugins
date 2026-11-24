@@ -5,10 +5,10 @@
   "author": {
     "name": "SharpPS"
   },
-  "homepage": "https://github.com/gweone/agent-plugins/tree/main/plugin/sharpps-knowledge",
+  "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-knowledge",
   "skills": "./skills/",
   "hooks": "./hooks/knowledge-hooks.json",
-  "repository": "https://github.com/gweone/agent-plugins",
+  "repository": "https://github.com/sharpps/agent-plugins",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "SharpPS Knowledge",
@@ -16,7 +16,7 @@
     "longDescription": "Evidence-backed Knowledge MCP retrieval, draft extraction and separately guarded review using already host-exposed tools.",
     "developerName": "SharpPS",
     "category": "Productivity",
-    "websiteURL": "https://github.com/gweone/agent-plugins",
+    "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-mcp",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"
