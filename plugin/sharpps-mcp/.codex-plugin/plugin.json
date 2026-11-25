@@ -19,7 +19,8 @@
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "termsOfServiceURL": "https://sharpps.dpdns.org/term-agent",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "supportURL": "https://github.com/sharpps/agent-plugins/issues"
   },
   "license": "MIT"
 }
