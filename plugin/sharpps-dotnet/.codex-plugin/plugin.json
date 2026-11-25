@@ -11,14 +11,19 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for .NET",
-    "shortDescription": ".NET tooling for SharpPS solutions: decompile Framework and .NET Core/5+ assemblies with ilspycmd, SharpPS.Shells pipelines (register, run, patch), and recurrin",
+    "shortDescription": ".NET development tools",
     "longDescription": ".NET tooling for SharpPS solutions: decompile Framework and .NET Core/5+ assemblies with ilspycmd, SharpPS.Shells pipelines (register, run, patch), and recurring C# patterns (DI auto-discovery, storage providers, pipeline processors, ASP.NET Core plugin-host bootstrap).",
     "developerName": "SharpPS",
-    "category": "Development",
+    "category": "Developer Tools",
     "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "capabilities": [
+      "Inspect .NET assemblies",
+      "Build SharpPS pipelines",
+      "Apply .NET service patterns"
+    ]
   },
   "license": "MIT"
 }

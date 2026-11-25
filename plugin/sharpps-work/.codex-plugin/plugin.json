@@ -11,14 +11,19 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for Work",
-    "shortDescription": "Office and documentation tooling for SharpPS: headless screenshots of authenticated apps (including multi-tenant/local domains), OpenXML Word (.docx) via python",
+    "shortDescription": "Engineering and office tools",
     "longDescription": "Office and documentation tooling for SharpPS: headless screenshots of authenticated apps (including multi-tenant/local domains), OpenXML Word (.docx) via python-docx, codebase-memory-mcp knowledge graphs, short Findings/Feedback/Conclusion docs, Chrome DevTools MCP page debugging, and Playwright CLI QA testing.",
     "developerName": "SharpPS",
     "category": "Productivity",
     "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "capabilities": [
+      "Debug browser applications",
+      "Run Playwright QA",
+      "Create engineering documents"
+    ]
   },
   "license": "MIT"
 }

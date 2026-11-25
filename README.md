@@ -17,6 +17,7 @@ Add this marketplace, then install a plugin from it:
 /plugin install sharpps-dotnet@sharpps-plugins
 /plugin install sharpps-work@sharpps-plugins
 /plugin install sharpps-mcp@sharpps-plugins
+/plugin install sharpps-knowledge@sharpps-plugins
 ```
 
 or browse for the plugin in `/plugin > Discover`.
@@ -47,12 +48,39 @@ To use these skills from another project, clone this repo somewhere (e.g.
 ## Plugins
 
 | Plugin | Description |
-|-s|---|
+|---|---|
 | [`sharpps-sitecore`](plugin/sharpps-sitecore) | Sitecore/SXA knowledge for solutions built on the SharpPS framework |
 | [`sharpps-liferay`](plugin/sharpps-liferay) | Liferay knowledge and workflow tooling for solutions built on the SharpPS framework |
 | [`sharpps-dotnet`](plugin/sharpps-dotnet) | .NET tooling knowledge for solutions built on the SharpPS framework |
 | [`sharpps-work`](plugin/sharpps-work) | General office/documentation tooling (screen capture, Word document generation) — not tied to any one platform |
-| [`sharpps-mcp`](plugin/sharpps-mcp) | SharpPS MCP endpoints for any agent: Replayr (`https://replayr.sharpps.dpdns.org/api/mcp`: write, run and review Playwright tests) and Identity Groups (`https://groups.sharpps.dpdns.org/mcp`: manage groups and members). No skills; the servers send their own instructions |
+| [`sharpps-mcp`](plugin/sharpps-mcp) | Combined SharpPS MCP configuration for Replayr, Identity Groups, Chrome DevTools, Shells, Attendance, and Trading. Kept for existing marketplace installs. |
+| [`sharpps-knowledge`](plugin/sharpps-knowledge) | Evidence-backed knowledge retrieval, learning drafts, and guarded review over the Knowledge MCP service |
+
+
+## ChatGPT public-directory packages
+
+Build dedicated ZIPs for the ChatGPT/Codex public plugin directory with:
+
+```bash
+./scripts/package-chatgpt.sh
+```
+
+The script writes ZIPs to `artifacts/chatgpt/`. It produces four skills-only packages
+(Sitecore, Liferay, .NET, and Work) and one package per MCP endpoint (Replayr,
+Groups, Browser, Shell, Attendance, Trading, and Knowledge). This split is intentional:
+OpenAI currently allows multiple MCP servers to be declared in a package, but only
+one MCP server can be connected per plugin in the submission flow. The combined
+`sharpps-mcp` configuration remains available for existing marketplace users.
+
+The public-directory packages omit lifecycle hooks. In particular, the Knowledge
+package keeps its skills and references but does not include its Codex/Claude hook
+configuration or scripts; OpenAI does not accept lifecycle-hook packages in the
+public directory. The original source plugin remains unchanged for other hosts.
+
+The generated packages have valid listing metadata and one-server MCP configs, but
+they are not submission-complete: each MCP plugin still needs five executed positive
+tests, three executed negative tests, a reviewer-accessible demo recording, and any
+required reviewer account details entered in the OpenAI dashboard.
 
 ## Plugin structure
 

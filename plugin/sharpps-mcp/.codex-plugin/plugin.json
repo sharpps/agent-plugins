@@ -1,7 +1,7 @@
 {
   "name": "sharpps-mcp",
   "version": "1.5.0",
-  "description": "Connect any AI agent to SharpPS over MCP: Replayr (write Playwright test scripts, run them on the Replayr runner, read Jam-like reports) and Identity Groups (list groups and members, add or remove members, with scoped OAuth).",
+  "description": "SharpPS developer services over MCP: remote Playwright testing and reports, identity groups, Chrome DevTools, remote shells, attendance, and trading tools.",
   "author": {
     "name": "SharpPS",
     "url": "https://github.com/sharpps/agent-plugins"
@@ -11,16 +11,24 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "SharpPS MCP",
-    "shortDescription": "Run Playwright tests on Replayr and manage Identity Groups over MCP.",
-    "longDescription": "Connect any AI agent to SharpPS over MCP: Replayr (write Playwright test scripts, run them on the Replayr runner, read Jam-like reports) and Identity Groups (list groups and members, add or remove members, with scoped OAuth). Sign in with OAuth when the agent asks (Replayr also accepts an API token).",
+    "shortDescription": "SharpPS developer tools",
+    "longDescription": "Connect to SharpPS developer services over MCP: run remote Playwright tests and inspect reports, manage identity groups, inspect Chrome sessions, run authorized remote shell tasks, access attendance workflows, and use trading tools. Sign in with OAuth when prompted; Replayr may also accept an API token.",
     "developerName": "SharpPS",
-    "category": "Development",
-    "websiteURL": "https://replayr.sharpps.dpdns.org",
+    "category": "Developer Tools",
+    "websiteURL": "https://cloud.sharpps.dpdns.org",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "termsOfServiceURL": "https://sharpps.dpdns.org/term-agent",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png",
-    "supportURL": "https://github.com/sharpps/agent-plugins/issues"
+    "supportURL": "https://github.com/sharpps/agent-plugins/issues",
+    "capabilities": [
+      "Run Playwright tests",
+      "Manage identity groups",
+      "Inspect Chrome pages",
+      "Run remote shell tasks",
+      "Review attendance records",
+      "Access trading tools"
+    ]
   },
   "license": "MIT"
 }

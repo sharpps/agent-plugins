@@ -11,14 +11,19 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for Liferay",
-    "shortDescription": "Liferay knowledge and workflow tooling for solutions built on the SharpPS framework: Gradle build/deploy, Docker log management, Batch Client Extensions, DDM fi",
+    "shortDescription": "Liferay development tools",
     "longDescription": "Liferay knowledge and workflow tooling for solutions built on the SharpPS framework: Gradle build/deploy, Docker log management, Batch Client Extensions, DDM field validation, Site Initializers, JSP/FTL taglibs, React module scaffolding, management toolbar bulk actions, portlet widget configuration, extending Document Library preview rendering, customizing Data Engine field editors via globalJS Client Extensions, and navigating the Liferay Portal source.",
     "developerName": "SharpPS",
-    "category": "Development",
+    "category": "Developer Tools",
     "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "capabilities": [
+      "Build Liferay modules",
+      "Deploy and troubleshoot Liferay",
+      "Customize Client Extensions"
+    ]
   },
   "license": "MIT"
 }

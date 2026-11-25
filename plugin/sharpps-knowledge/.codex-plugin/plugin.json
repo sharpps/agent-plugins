@@ -12,7 +12,7 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "SharpPS Knowledge",
-    "shortDescription": "Evidence-backed retrieval, learning and guarded review",
+    "shortDescription": "Search and curate knowledge",
     "longDescription": "Evidence-backed Knowledge MCP retrieval, draft extraction and separately guarded review using already host-exposed tools.",
     "developerName": "SharpPS",
     "category": "Productivity",
@@ -21,7 +21,12 @@
     "termsOfServiceURL": "https://sharpps.dpdns.org/term-agent",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png",
-    "supportURL": "https://github.com/sharpps/agent-plugins/issues"
+    "supportURL": "https://github.com/sharpps/agent-plugins/issues",
+    "capabilities": [
+      "Search stored knowledge",
+      "Draft knowledge updates",
+      "Review knowledge safely"
+    ]
   },
   "license": "MIT"
 }

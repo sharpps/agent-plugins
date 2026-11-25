@@ -11,14 +11,19 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "SharpPS for Sitecore",
-    "shortDescription": "Sitecore/SXA knowledge for SharpPS solutions: SPE/Shells for publish and Unicorn, SXA search (/sxa/search/*), Feature/Foundation projects, Controller Renderings",
+    "shortDescription": "Sitecore and SXA development",
     "longDescription": "Sitecore/SXA knowledge for SharpPS solutions: SPE/Shells for publish and Unicorn, SXA search (/sxa/search/*), Feature/Foundation projects, Controller Renderings with custom .cshtml paths, datasource-driven HTML, CorePipeline processors, idempotent SQL scripts for Database/Database.Tools, and HTTP database access via DatabaseController.",
     "developerName": "SharpPS",
-    "category": "Development",
+    "category": "Developer Tools",
     "websiteURL": "https://github.com/sharpps/agent-plugins",
     "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "logo": "./assets/icon.png",
+    "capabilities": [
+      "Build Sitecore features",
+      "Troubleshoot SXA search",
+      "Work with renderings"
+    ]
   },
   "license": "MIT"
 }
