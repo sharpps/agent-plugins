@@ -17,7 +17,8 @@
     "developerName": "SharpPS",
     "category": "Productivity",
     "websiteURL": "https://github.com/sharpps/agent-plugins",
-    "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-mcp",
+    "privacyPolicyURL": "https://sharpps.dpdns.org/privacy-agent",
+    "termsOfServiceURL": "https://sharpps.dpdns.org/term-agent",
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/icon.png"
   },

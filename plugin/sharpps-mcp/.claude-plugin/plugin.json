@@ -8,6 +8,6 @@
   },
   "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-mcp",
   "mcpServers": "./.mcp.json",
-  "privacyPolicyUrl": "https://sharpps.dpdns.org/privacy-mcp",
+  "privacyPolicyUrl": "https://sharpps.dpdns.org/privacy-agent",
   "license": "MIT"
 }
