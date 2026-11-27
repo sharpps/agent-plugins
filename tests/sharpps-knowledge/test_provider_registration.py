@@ -9,7 +9,13 @@ import tempfile
 import unittest
 import zipfile
 
-BASE = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "plugin" / "sharpps-knowledge"
+
+
+def clean_env():
+    """Explicit minimal environment; the tests never read or forward the caller's environment."""
+    return {"SYSTEMROOT": r"C:\Windows"} if sys.platform == "win32" else {"PATH": "/usr/bin:/bin"}
 
 
 class ProviderRegistrationTests(unittest.TestCase):
@@ -18,7 +24,7 @@ class ProviderRegistrationTests(unittest.TestCase):
 
     def test_codex_explicit_shared_hooks_without_unsupported_agents(self):
         manifest = self.manifest("codex")
-        self.assertEqual(manifest["hooks"], "./hooks/knowledge-hooks.json")
+        self.assertEqual(manifest["hooks"], "./hooks/codex-hooks.json")
         self.assertNotIn("agents", manifest)
         hooks = json.loads((BASE / manifest["hooks"]).read_text())["hooks"]
         self.assertEqual(set(hooks), {"SessionStart", "UserPromptSubmit", "Stop"})
@@ -31,8 +37,7 @@ class ProviderRegistrationTests(unittest.TestCase):
 
     def test_codex_helper_documented_output_shapes_and_silent_success(self):
         # OpenAI documents empty stdout on exit 0 as success, including Stop.
-        env = dict(os.environ)
-        env.pop("SHARPPS_KNOWLEDGE_STOP_REMINDER", None)
+        env = clean_env()
         for event in ("SessionStart", "UserPromptSubmit", "Stop"):
             payload = {"hook_event_name": event, "stop_hook_active": False,
                        "prompt": "secret-marker", "transcript_path": "/do/not/read"}
@@ -89,7 +94,7 @@ class ProviderRegistrationTests(unittest.TestCase):
     def test_real_package_contains_manifest_targets_and_flattened_cursor_files(self):
         # Execute the unchanged script only in a disposable repository-shaped fixture.
         # This exercises ZIP contents, not host installation, syncing or model behavior.
-        root = BASE.parents[1]
+        root = ROOT
         if not (root / "scripts/package-plugins.sh").is_file():
             self.skipTest("optional locally untracked packaging script is absent")
         with tempfile.TemporaryDirectory() as temporary:

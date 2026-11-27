@@ -38,7 +38,7 @@ https://{hostname}/api/SharpPS/Database/{connectionStringName}/{action}
 ## Certificates
 
 These hosts commonly run a self-signed certificate. From a shell,
-bypass the TLS error explicitly (`curl -k`/`--insecure`, PowerShell
+bypass the TLS error explicitly (your HTTP client's skip-verification option, PowerShell
 `-SkipCertificateCheck`) - only for a host the user has confirmed as
 theirs.
 
@@ -57,7 +57,7 @@ once per host per session, not before every call. See
 ## Reaching the host
 
 Prefer sending the request through chrome-devtools MCP instead of
-`curl` once the host is reachable (see [Certificates](#certificates)):
+a command-line HTTP client once the host is reachable (see [Certificates](#certificates)):
 open/select a tab on `{hostname}`, then call `evaluate_script` with a
 `fetch()` against the endpoint to send data and read the JSON response
 back. See

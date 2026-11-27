@@ -65,7 +65,7 @@ Role separation, rubric use and parent-only writes are prompt-level workflow ins
 
 ## Claude lifecycle support
 
-The Claude manifest explicitly lists `agents/knowledge-extractor.md`, `agents/knowledge-reviewer.md` and `agents/knowledge-retriever.md`, plus `hooks/knowledge-hooks.json`. The hook file uses a non-default name so the explicit declaration does not also load the default `hooks/hooks.json`. Traditional command hooks target Claude Code 2.1.274, not experimental hook modules. SessionStart/UserPromptSubmit inject short context-only reminders. Stop is a nonblocking optional message: default silent, enabled only if the operator supplies `SHARPPS_KNOWLEDGE_STOP_REMINDER=1` to their client environment. The helper emits at most one fixed message per event and only when `stop_hook_active` is explicitly false; it never blocks Stop or recursively requests continuation. No settings are edited by this package.
+The Claude manifest explicitly lists `agents/knowledge-extractor.md`, `agents/knowledge-reviewer.md` and `agents/knowledge-retriever.md`, plus `hooks/knowledge-hooks.json`. The hook file uses a non-default name so the explicit declaration does not also load the default `hooks/hooks.json`. Traditional command hooks target Claude Code 2.1.274, not experimental hook modules; they use the exec form (`command` plus `args`, supported since Claude Code 2.1.139), so no shell parses the path. SessionStart/UserPromptSubmit inject short context-only reminders. Stop is a nonblocking optional message: default silent, enabled only if the operator supplies `SHARPPS_KNOWLEDGE_STOP_REMINDER=1` to their client environment. The helper emits at most one fixed message per event and only when `stop_hook_active` is explicitly false; it never blocks Stop or recursively requests continuation. No settings are edited by this package.
 
 Python 3 must already be available; no dependency installation. Helper input is capped at 16,384 bytes, hook timeout two seconds; malformed/oversized/unknown input is silent. It reads only bounded hook stdin, uses only a dedicated opt-in flag, writes fixed context, and performs no network, MCP, transcript, file-state, credential or model operations. Host-provided transcript paths and prompt text are ignored and never echoed. Native extractor/reviewer wrappers are read-only (`Read`); the parent owns all MCP writes.
 
@@ -73,7 +73,7 @@ Hooks remind about mandatory same-turn continuation in an active capable client 
 
 ## Other clients: explicit supported components
 
-- **Codex / ChatGPT:** `.codex-plugin/plugin.json` explicitly references `hooks/knowledge-hooks.json`. OpenAI documents these three events, their context/message outputs, seconds-based timeouts and the `CLAUDE_PLUGIN_ROOT` compatibility variable. Exit zero with empty stdout is a successful no-op, including default-off Stop. Runtime loading requires supported enabled hooks, user trust and scripts present in the execution environment; web installation alone does not deploy scripts. There is no invented `agents` field: reusable role behavior remains available through skills and separate passes.
+- **Codex / ChatGPT:** `.codex-plugin/plugin.json` explicitly references `hooks/codex-hooks.json` (same events and helper; Codex documents only a single `command` string, so that file keeps the one-line form). OpenAI documents these three events, their context/message outputs, seconds-based timeouts and the `CLAUDE_PLUGIN_ROOT` compatibility variable. Exit zero with empty stdout is a successful no-op, including default-off Stop. Runtime loading requires supported enabled hooks, user trust and scripts present in the execution environment; web installation alone does not deploy scripts. There is no invented `agents` field: reusable role behavior remains available through skills and separate passes.
 - **Cursor:** `.cursor-plugin/plugin.json` explicitly lists the three top-level self-contained files `agents/cursor-knowledge-extractor.md`, `agents/cursor-knowledge-reviewer.md` and `agents/cursor-knowledge-retriever.md`. They use documented `readonly: true`, not Claude's `tools: Read` field, with equivalent inline role rules. Existing nested `agents/cursor/*.md` wrappers are retained unchanged as unused compatibility files, not manifest targets. The parent owns MCP writes. Cursor's native hooks use different event/config shapes, so no Cursor hooks are registered here.
 - **Grok:** native agents/hooks and Claude compatibility are documented, but the repository's `.grok-plugin/plugin.json` field contract has not been verified. It remains unchanged; do not claim native registration parity.
 - **OpenCode:** `.opencode-plugin/plugin.json` remains documentation-only. OpenCode uses native agent configuration/Markdown discovery and JavaScript/TypeScript plugin hooks; this package does not install either.
@@ -98,7 +98,7 @@ From the checkout, run:
 
 ```sh
 ./scripts/install-agent-skills.sh
-python3 -I -B -m unittest discover -s plugin/sharpps-knowledge/tests -v
+python3 -I -B -m unittest discover -s tests/sharpps-knowledge -v
 claude plugin validate plugin/sharpps-knowledge --strict
 ```
 

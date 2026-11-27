@@ -1,13 +1,49 @@
 {
   "hooks": {
     "SessionStart": [
-      {"hooks": [{"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/context.py\"", "timeout": 2}]}
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3",
+            "timeout": 2,
+            "args": [
+              "-I",
+              "${CLAUDE_PLUGIN_ROOT}/hooks/context.py"
+            ]
+          }
+        ]
+      }
     ],
     "UserPromptSubmit": [
-      {"hooks": [{"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/context.py\"", "timeout": 2}]}
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3",
+            "timeout": 2,
+            "args": [
+              "-I",
+              "${CLAUDE_PLUGIN_ROOT}/hooks/context.py"
+            ]
+          }
+        ]
+      }
     ],
     "Stop": [
-      {"hooks": [{"type": "command", "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/context.py\"", "timeout": 2}]}
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3",
+            "timeout": 2,
+            "args": [
+              "-I",
+              "${CLAUDE_PLUGIN_ROOT}/hooks/context.py"
+            ]
+          }
+        ]
+      }
     ]
   }
 }

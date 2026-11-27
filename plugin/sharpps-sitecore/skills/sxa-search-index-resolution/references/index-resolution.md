@@ -15,7 +15,7 @@ $sp = ConvertTo-SecureString $Password -AsPlainText -Force
 $webSession = New-SitecoreSession -Url $Url -Username $Username -Password $sp
 
 $query = "/sxa/search/results?sc_site=$SiteName&sc_database=$Database&itemid=$ItemId&v=$VariantId&p=5&e=0"
-Invoke-WebRequest -Uri "$Url$query" -WebSession $webSession -UseBasicParsing
+Invoke-RestMethod -Uri "$Url$query" -WebSession $webSession
 ```
 
 - `sc_site` - plain public param (`Site` on `BaseModel`), works for anyone,
@@ -41,7 +41,7 @@ Invoke-WebRequest -Uri "$Url$query" -WebSession $webSession -UseBasicParsing
   unauthenticated call silently ignores it and the database stays whatever
   the site is configured for (typically `web`). That's why the example above
   goes through `New-SitecoreSession`'s `$webSession` rather than a bare
-  `Invoke-WebRequest` - a plain anonymous fetch (browser JS, curl, etc.)
+  web request - a plain anonymous fetch (browser JS, a command-line client, etc.)
   cannot exercise `sc_database` at all.
 
 Full details on both mechanisms - including why there's no equivalent
@@ -256,12 +256,12 @@ is). Not something a public-facing search widget can rely on; only useful
 for an authenticated CM-side/admin request.
 
 **Practical implication for testing `sc_database`:** a plain anonymous call
-(browser fetch, unauthenticated `Invoke-WebRequest`) won't carry Sitecore
+(browser fetch, an unauthenticated web request) won't carry Sitecore
 auth, so `sc_database` gets silently dropped and it looks like the parameter
 does nothing. To actually exercise it, issue the request through the
 authenticated session from [sitecore-spe-remoting](../../sitecore-spe-remoting/SKILL.md) —
 reuse its `$webSession` (from `New-SitecoreSession`) via
-`Invoke-WebRequest -WebSession $webSession -Uri "$Url/sxa/search/results?...
+`Invoke-RestMethod -WebSession $webSession -Uri "$Url/sxa/search/results?...
 &sc_database=master"` in PowerShell, not an anonymous request. `sc_site` is
 unrelated to this - it isn't gated by authentication at all (see above), so
 don't conflate the two: only `sc_database` needs the authenticated session,

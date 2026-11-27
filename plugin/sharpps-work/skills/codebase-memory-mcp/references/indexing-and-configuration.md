@@ -27,11 +27,7 @@ codebase-memory-mcp cli index_status --project <project> --verbose true
 
 If the binary is absent, request approval for setup first. The documented installer below
 also changes any detected clients' global configuration/hooks/profiles/skills. It is not a
-binary-only or harmless remote install; inspect its current behavior before approval:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
-```
+binary-only or harmless remote install; inspect its current behavior before approval. Use the install instructions in the project's own README ([DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp), "Installation" section) rather than a copied one-liner.
 
 After an approved remote install, do not wait for or reference an MCP tool restart here, and
 don't call MCP tool names (`index_repository`, `search_graph`, etc.) directly; those only exist

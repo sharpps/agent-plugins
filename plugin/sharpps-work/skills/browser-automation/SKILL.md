@@ -1,6 +1,6 @@
 ---
 name: browser-automation
-description: Automate a web app in a fresh, isolated headless browser with Playwright (playwright-cli and Playwright scripts), not in the user's own Chrome. Two modes: test it as QC (scenario matrix, pass/fail report with screenshot evidence, regression checks after a fix, promoting verified flows into npx playwright tests) and capture real screenshots for documentation, manuals, or login/setup/error flows (role-specific captures, reusable storageState, local virtual-host routing, screenshot verification; not mockups). Not for root-cause debugging of a live page in the user's Chrome (use browser-debug) or Jam recordings (use browser-recording).
+description: "Automate a web app in a fresh, isolated headless browser with Playwright (playwright-cli and Playwright scripts), not in the user's own Chrome. Two modes: test it as QC (scenario matrix, pass/fail report with screenshot evidence, regression checks after a fix, promoting verified flows into npx playwright tests) and capture real screenshots for documentation, manuals, or login/setup/error flows (role-specific captures, reusable storageState, local virtual-host routing, screenshot verification; not mockups). Not for root-cause debugging of a live page in the user's Chrome (use browser-debug) or Jam recordings (use browser-recording)."
 ---
 
 # Browser automation (fresh browser)

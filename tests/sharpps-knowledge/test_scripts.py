@@ -8,7 +8,8 @@ import sys
 import tempfile
 import unittest
 
-BASE = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "plugin" / "sharpps-knowledge"
 CHUNK = BASE / "skills/knowledge-learn/scripts/chunk_source.py"
 EVAL = BASE / "skills/knowledge-retrieve/scripts/eval_retrieval.py"
 GOLDEN = BASE / "skills/knowledge-retrieve/references/golden.example.json"

@@ -10,8 +10,8 @@ import subprocess
 import sys
 import unittest
 
-BASE = Path(__file__).resolve().parents[1]
-ROOT = BASE.parents[1]
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "plugin" / "sharpps-knowledge"
 HELPER = BASE / "hooks/context.py"
 
 
@@ -19,10 +19,14 @@ def plugin_version():
     return json.loads((BASE / ".claude-plugin/plugin.json").read_text())["version"]
 
 
+def clean_env():
+    """Explicit minimal environment; the tests never read or forward the caller's environment."""
+    return {"SYSTEMROOT": r"C:\Windows"} if sys.platform == "win32" else {"PATH": "/usr/bin:/bin"}
+
+
 class HookTests(unittest.TestCase):
     def run_hook(self, data, enabled=False):
-        env = dict(os.environ)
-        env.pop("SHARPPS_KNOWLEDGE_STOP_REMINDER", None)
+        env = clean_env()
         if enabled:
             env["SHARPPS_KNOWLEDGE_STOP_REMINDER"] = "1"
         result = subprocess.run([sys.executable, "-I", "-B", str(HELPER)], input=data,
@@ -144,7 +148,8 @@ class PackageTests(unittest.TestCase):
             command = groups[0]["hooks"][0]
             self.assertEqual(command["type"], "command")
             self.assertEqual(command["timeout"], 2)
-            self.assertEqual(command["command"], 'python3 -I "${CLAUDE_PLUGIN_ROOT}/hooks/context.py"')
+            self.assertEqual(command["command"], "python3")
+            self.assertEqual(command["args"], ["-I", "${CLAUDE_PLUGIN_ROOT}/hooks/context.py"])
         for relative in manifest["agents"]:
             path = BASE / relative
             self.assertRegex(path.read_text(), r"(?m)^tools: Read$")
@@ -235,7 +240,7 @@ class PackageTests(unittest.TestCase):
             self.assertIn(phrase, text)
 
     def test_scenario_protocol_coverage_not_behavioral_execution(self):
-        fixture = json.loads((BASE / "tests/scenarios.json").read_text())
+        fixture = json.loads((Path(__file__).resolve().parent / "scenarios.json").read_text())
         self.assertIn("unrun model-behavior", fixture["kind"])
         protocol = (BASE / "references/protocol.md").read_text()
         self.assertEqual(len({s["id"] for s in fixture["scenarios"]}), 62)
@@ -457,7 +462,7 @@ class GlobalSearchProtocolTests(unittest.TestCase):
                        "without connector replay or manual-review downgrade",
                        "never drop provenance to bypass access"):
             self.assertIn(phrase, protocol)
-        scenarios = json.loads((BASE / "tests/scenarios.json").read_text())["scenarios"]
+        scenarios = json.loads((Path(__file__).resolve().parent / "scenarios.json").read_text())["scenarios"]
         global_cases = {s["id"] for s in scenarios if s["id"].startswith("all-accessible-")}
         self.assertEqual(global_cases, {"all-accessible-explicit", "all-accessible-not-automatic",
                                        "all-accessible-older-schema", "all-accessible-incompatible-schema",

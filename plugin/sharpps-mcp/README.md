@@ -1,4 +1,4 @@
-# sharpps-mcp 1.5.0
+# sharpps-mcp 1.5.1
 
 SharpPS endpoints for any AI agent: **Replayr**, **Identity Groups**, **Chrome Remote DevTools**, **Shells**, and **Knowledge**. The servers send their own usage instructions when the agent connects, so every MCP client gets them. The plugin ships no skills: any detailed guidance is served by the MCP servers themselves.
 

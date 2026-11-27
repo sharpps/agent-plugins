@@ -14,13 +14,7 @@ v0.10.2 — the README's own wording implies these are two separable steps, `ins
 `codebase-memory-mcp install`, but running `install.sh` alone produced a fully configured install:
 binary present, MCP entry in `~/.claude.json`, agent profiles in `~/.claude/agents/`, skill file in
 `~/.claude/skills/codebase-memory/`, and `PreToolUse`/`PostToolUse`/`SessionStart` hooks in the
-**global** `~/.claude/settings.json`, not project-scoped):
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
-```
-(Windows: `Invoke-WebRequest ... install.ps1` then `.\install.ps1` — see the repo's README for
-the exact PowerShell sequence.)
+**global** `~/.claude/settings.json`, not project-scoped): follow the install instructions in the project's own README ([DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp), "Installation" section) for your platform instead of copying a piped one-liner from here.
 
 Under the hood this: downloads the release binary to `~/.local/bin/codebase-memory-mcp`, verifies
 its SHA-256 against the published `checksums.txt`, does a `--version` smoke-test, then auto-detects
@@ -50,7 +44,7 @@ manual handoff; do not bypass the permission boundary.
 
 ## Recorded auto-mode denial
 
-**Confirmed in the recorded auto-mode session**: `curl | bash` (or downloading the
+**Confirmed in the recorded auto-mode session**: the project's one-line installer (or downloading the
 script first and running it as a separate step — tried both) was denied by Claude Code's
 auto-mode permission classifier as "fetching and executing an external binary." Both
 attempts and a `settings.json` permission edit were blocked. This is evidence about

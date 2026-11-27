@@ -60,7 +60,7 @@ $global:LASTEXITCODE = 0            # (1) pure-PowerShell commands never set it 
 try                                  #     or a stale/unset value gives a false verdict
 {
 	$ErrorActionPreference = "Stop"  # (2) command-not-found is non-terminating by default:
-	Invoke-Expression $arguments["BuildCommand"]   # it prints red and KEEPS GOING unless EAP=Stop
+	& ([scriptblock]::Create($arguments["BuildCommand"]))   # it prints red and KEEPS GOING unless EAP=Stop
 }
 catch
 {
@@ -85,7 +85,7 @@ deploys nothing.
 
 ## Command configuration is trusted code
 
-`Invoke-Expression $arguments["BuildCommand"]` executes arbitrary PowerShell. Only use this
+Turning `$arguments["BuildCommand"]` into a script block and running it executes arbitrary PowerShell. Only use this
 legacy build-command pattern with explicitly trusted and reviewed arguments/configuration;
 never interpolate untrusted input or treat XML as inert when it feeds command execution.
 Prefer a fixed executable and an explicit argument array with `&` where possible. The example

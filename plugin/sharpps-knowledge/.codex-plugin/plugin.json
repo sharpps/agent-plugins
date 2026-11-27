@@ -7,7 +7,7 @@
   },
   "homepage": "https://github.com/sharpps/agent-plugins/tree/main/plugin/sharpps-knowledge",
   "skills": "./skills/",
-  "hooks": "./hooks/knowledge-hooks.json",
+  "hooks": "./hooks/codex-hooks.json",
   "repository": "https://github.com/sharpps/agent-plugins",
   "mcpServers": "./.mcp.json",
   "interface": {

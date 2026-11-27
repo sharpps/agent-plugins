@@ -51,7 +51,7 @@ Prefer reading source/`Get-Pipeline`; inspect all side effects before executing 
 | 01-Resolve-Configuration, XML keys, aborts, native exit/error handling | [Configuration and failure](references/configuration-and-failure.md) |
 | Delegation/predecessors, isolated verification, worked source traces | [Chaining and verification](references/chaining-and-verification.md) |
 
-`Invoke-Expression` build configuration is executable trusted code, not safe data; read its
+Build configuration that is run as a command string is executable trusted code, not safe data; read its
 [caveat](references/configuration-and-failure.md#command-configuration-is-trusted-code) before reuse.
 External source/version examples are not newly runtime-verified. `Deploy/` and `docker` are
 workspace/version examples, not guaranteed shipped pipelines; inspect the installed version.

@@ -1,6 +1,6 @@
 ---
 name: reading-document
-description: Read and extract content from documents by converting them to Markdown with Microsoft's markitdown CLI: PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx), HTML or a URL, CSV/JSON/XML, and ZIP archives. Use when the user attaches or points to a document and wants it read, summarized, searched, quoted, compared, or its text or tables extracted. Works out of the box without plugins, and notes optional ones (such as OCR) that can help with scanned PDFs and images. Covers the default blind spots (scanned PDFs and images come out empty, uncalculated Excel formulas show NaN). Not for creating or editing documents (use generate-word).
+description: "Read and extract content from documents by converting them to Markdown with Microsoft's markitdown CLI: PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx), HTML or a URL, CSV/JSON/XML, and ZIP archives. Use when the user attaches or points to a document and wants it read, summarized, searched, quoted, compared, or its text or tables extracted. Works out of the box without plugins, and notes optional ones (such as OCR) that can help with scanned PDFs and images. Covers the default blind spots (scanned PDFs and images come out empty, uncalculated Excel formulas show NaN). Not for creating or editing documents (use generate-word)."
 ---
 
 # Reading documents with markitdown
