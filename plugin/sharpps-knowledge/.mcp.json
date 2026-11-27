@@ -2,18 +2,7 @@
   "mcpServers": {
     "SharpPS Knowledge": {
       "type": "http",
-      "url": "https://cloud.sharpps.dpdns.org/knowledge/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://cloud.sharpps.dpdns.org/knowledge/mcp"
     }
   }
 }

@@ -2,6 +2,15 @@
 
 Liferay knowledge and workflow tooling for solutions built on the [SharpPS](https://github.com/sharpps) framework.
 
+
+## Install
+
+In Claude Code, run:
+
+```text
+/plugin install sharpps-liferay --marketplace sharpps/agent-plugins
+```
+
 ## Skills
 
 | Skill | Covers |

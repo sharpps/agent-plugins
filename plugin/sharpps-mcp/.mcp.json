@@ -1,94 +1,24 @@
 {
   "mcpServers": {
+    "SharpPS Shells": {
+      "type": "http",
+      "url": "https://cloud.sharpps.dpdns.org/shell/mcp"
+    },
     "SharpPS Replayr": {
       "type": "http",
-      "url": "https://replayr.sharpps.dpdns.org/api/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://replayr.sharpps.dpdns.org/api/mcp"
     },
     "SharpPS Groups": {
       "type": "http",
-      "url": "https://groups.sharpps.dpdns.org/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://groups.sharpps.dpdns.org/mcp"
     },
-    "SharpPS Chrome Dev Tools": {
+    "SharpPS Chrome Remote DevTools": {
       "type": "http",
-      "url": "https://cloud.sharpps.dpdns.org/chrome/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://cloud.sharpps.dpdns.org/chrome/mcp"
     },
-    "SharpPS Shells": {
+    "SharpPS Knowledge": {
       "type": "http",
-      "url": "https://cloud.sharpps.dpdns.org/shell/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
-    },
-    "SharpPS Attendance": {
-      "type": "http",
-      "url": "https://cloud.sharpps.dpdns.org/attendance/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
-    },
-    "SharpPS Trading": {
-      "type": "http",
-      "url": "https://cloud.sharpps.dpdns.org/trading/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://cloud.sharpps.dpdns.org/knowledge/mcp"
     }
   }
 }

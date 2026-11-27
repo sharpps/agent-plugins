@@ -2,6 +2,15 @@
 
 Sitecore/SXA knowledge for solutions built on the [SharpPS](https://github.com/sharpps) framework.
 
+
+## Install
+
+In Claude Code, run:
+
+```text
+/plugin install sharpps-sitecore --marketplace sharpps/agent-plugins
+```
+
 ## Skills
 
 | Skill | Covers |

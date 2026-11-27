@@ -12,12 +12,12 @@ Add this marketplace, then install a plugin from it:
 
 ```
 /plugin marketplace add sharpps/agent-plugins
-/plugin install sharpps-sitecore@sharpps-plugins
-/plugin install sharpps-liferay@sharpps-plugins
-/plugin install sharpps-dotnet@sharpps-plugins
-/plugin install sharpps-work@sharpps-plugins
-/plugin install sharpps-mcp@sharpps-plugins
-/plugin install sharpps-knowledge@sharpps-plugins
+/plugin install sharpps-sitecore@sharpps-marketplace
+/plugin install sharpps-liferay@sharpps-marketplace
+/plugin install sharpps-dotnet@sharpps-marketplace
+/plugin install sharpps-work@sharpps-marketplace
+/plugin install sharpps-mcp@sharpps-marketplace
+/plugin install sharpps-knowledge@sharpps-marketplace
 ```
 
 or browse for the plugin in `/plugin > Discover`.
@@ -53,7 +53,7 @@ To use these skills from another project, clone this repo somewhere (e.g.
 | [`sharpps-liferay`](plugin/sharpps-liferay) | Liferay knowledge and workflow tooling for solutions built on the SharpPS framework |
 | [`sharpps-dotnet`](plugin/sharpps-dotnet) | .NET tooling knowledge for solutions built on the SharpPS framework |
 | [`sharpps-work`](plugin/sharpps-work) | General office/documentation tooling (screen capture, Word document generation) — not tied to any one platform |
-| [`sharpps-mcp`](plugin/sharpps-mcp) | Combined SharpPS MCP configuration for Replayr, Identity Groups, Chrome DevTools, Shells, Attendance, and Trading. Kept for existing marketplace installs. |
+| [`sharpps-mcp`](plugin/sharpps-mcp) | Combined SharpPS remote tools configuration for Replayr, Identity Groups, Chrome DevTools, Shells, Attendance, and Trading. Kept for existing marketplace installs. |
 | [`sharpps-knowledge`](plugin/sharpps-knowledge) | Evidence-backed knowledge retrieval, learning drafts, and guarded review over the Knowledge MCP service |
 
 

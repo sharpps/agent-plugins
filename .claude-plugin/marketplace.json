@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "sharpps-plugins",
+  "name": "sharpps-marketplace",
   "description": "Plugin marketplace for SharpPS framework tooling and knowledge",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "owner": {
     "name": "SharpPS",
     "email": "sharpps.official@outlook.com"
@@ -11,7 +11,7 @@
     {
       "name": "sharpps-knowledge",
       "description": "Evidence-backed Knowledge MCP retrieval, learning and guarded separate review using host-exposed tools; bundles the SharpPS Knowledge MCP entry.",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },
@@ -23,7 +23,7 @@
       "name": "sharpps-sitecore",
       "displayName": "SharpPS for Sitecore",
       "description": "Sitecore/SXA knowledge for SharpPS solutions: SPE/Shells for publish and Unicorn, SXA search (/sxa/search/*), Feature/Foundation projects, Controller Renderings with custom .cshtml paths, datasource-driven HTML, CorePipeline processors, and idempotent SQL scripts for Database/Database.Tools.",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },
@@ -36,7 +36,7 @@
       "name": "sharpps-liferay",
       "displayName": "SharpPS for Liferay",
       "description": "Liferay knowledge and workflow tooling for solutions built on the SharpPS framework: Gradle build/deploy, Docker log management, Batch Client Extensions, DDM field validation, Site Initializers, JSP/FTL taglibs, React module scaffolding, management toolbar bulk actions, portlet widget configuration, extending Document Library preview rendering, customizing Data Engine field editors via globalJS Client Extensions, and navigating the Liferay Portal source.",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },
@@ -49,7 +49,7 @@
       "name": "sharpps-dotnet",
       "displayName": "SharpPS for .NET",
       "description": ".NET tooling for SharpPS solutions: decompile Framework and .NET Core/5+ assemblies with ilspycmd, SharpPS.Shells pipelines (register, run, patch), and recurring C# patterns (DI auto-discovery, storage providers, pipeline processors, ASP.NET Core plugin-host bootstrap).",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },
@@ -62,7 +62,7 @@
       "name": "sharpps-work",
       "displayName": "SharpPS for Work",
       "description": "Office and documentation tooling for SharpPS: headless screenshots of authenticated apps (including multi-tenant/local domains), OpenXML Word (.docx) via python-docx, codebase-memory-mcp knowledge graphs, short Findings/Feedback/Conclusion docs, Chrome DevTools MCP page debugging, and Playwright CLI QA testing.",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },
@@ -73,9 +73,9 @@
     },
     {
       "name": "sharpps-mcp",
-      "displayName": "SharpPS MCP",
+      "displayName": "SharpPS",
       "description": "SharpPS over MCP for any AI agent: Replayr (write Playwright tests, run them, read Jam-like reports) and Identity Groups (manage groups and members with scoped OAuth). MCP endpoints only; the servers send their own usage instructions.",
-      "version": "1.5.0",
+      "version": "1.5.1",
       "author": {
         "name": "SharpPS"
       },

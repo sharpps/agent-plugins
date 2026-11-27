@@ -2,6 +2,15 @@
 
 General office/documentation tooling for solutions built on the [SharpPS](https://github.com/sharpps) framework — not tied to any one platform, unlike this marketplace's other plugins.
 
+
+## Install
+
+In Claude Code, run:
+
+```text
+/plugin install sharpps-work --marketplace sharpps/agent-plugins
+```
+
 ## Skills
 
 | Skill | Covers |

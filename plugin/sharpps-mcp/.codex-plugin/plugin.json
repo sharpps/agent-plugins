@@ -1,7 +1,7 @@
 {
   "name": "sharpps-mcp",
-  "version": "1.5.0",
-  "description": "SharpPS developer services over MCP: remote Playwright testing and reports, identity groups, Chrome DevTools, remote shells, attendance, and trading tools.",
+  "version": "1.5.1",
+  "description": "SharpPS services over MCP: Replayr for remote Playwright testing, Identity Groups, Chrome Remote DevTools, remote Shells, and Knowledge retrieval.",
   "author": {
     "name": "SharpPS",
     "url": "https://github.com/sharpps/agent-plugins"
@@ -10,9 +10,9 @@
   "repository": "https://github.com/sharpps/agent-plugins",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "SharpPS MCP",
+    "displayName": "SharpPS",
     "shortDescription": "SharpPS developer tools",
-    "longDescription": "Connect to SharpPS developer services over MCP: run remote Playwright tests and inspect reports, manage identity groups, inspect Chrome sessions, run authorized remote shell tasks, access attendance workflows, and use trading tools. Sign in with OAuth when prompted; Replayr may also accept an API token.",
+    "longDescription": "Connect to SharpPS services over MCP: run remote Playwright tests, manage identity groups, inspect remote Chrome sessions with Chrome Remote DevTools, run authorized remote shell tasks, and search approved knowledge.",
     "developerName": "SharpPS",
     "category": "Developer Tools",
     "websiteURL": "https://cloud.sharpps.dpdns.org",
@@ -22,12 +22,11 @@
     "logo": "./assets/icon.png",
     "supportURL": "https://github.com/sharpps/agent-plugins/issues",
     "capabilities": [
-      "Run Playwright tests",
+      "Run remote Playwright tests",
       "Manage identity groups",
-      "Inspect Chrome pages",
-      "Run remote shell tasks",
-      "Review attendance records",
-      "Access trading tools"
+      "Inspect Chrome remotely",
+      "Run authorized remote shell tasks",
+      "Search and retrieve knowledge"
     ]
   },
   "license": "MIT"

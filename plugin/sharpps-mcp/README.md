@@ -1,6 +1,6 @@
 # sharpps-mcp 1.5.0
 
-SharpPS MCP endpoints for any AI agent: **Replayr** (Playwright tests) and **Identity Groups** (Entra-style groups for Clerk). The servers send their own usage instructions when the agent connects, so every MCP client gets them. The plugin ships no skills: any detailed guidance is served by the MCP servers themselves.
+SharpPS endpoints for any AI agent: **Replayr**, **Identity Groups**, **Chrome Remote DevTools**, **Shells**, and **Knowledge**. The servers send their own usage instructions when the agent connects, so every MCP client gets them. The plugin ships no skills: any detailed guidance is served by the MCP servers themselves.
 
 | Server | Endpoint | What it does |
 |---|---|---|
@@ -32,7 +32,7 @@ Claude Code, Codex, Cursor, Grok: install the plugin from this marketplace; the 
 
 ```
 /plugin marketplace add sharpps/agent-plugins
-/plugin install sharpps-mcp@sharpps-plugins
+/plugin install sharpps-mcp@sharpps-marketplace
 ```
 
 Then authorize the server (`/mcp` in Claude Code) and ask, for example: "Run the login tests on my staging project and tell me what failed."

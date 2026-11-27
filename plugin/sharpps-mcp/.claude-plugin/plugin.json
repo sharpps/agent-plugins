@@ -1,8 +1,8 @@
 {
   "name": "sharpps-mcp",
-  "displayName": "SharpPS MCP",
-  "version": "1.5.0",
-  "description": "Connect any AI agent to SharpPS over MCP: Replayr (write Playwright test scripts, run them on the Replayr runner, read Jam-like reports) and Identity Groups (list groups and members, add or remove members, with scoped OAuth).",
+  "displayName": "SharpPS",
+  "version": "1.5.1",
+  "description": "SharpPS services over MCP: Replayr for remote Playwright testing, Identity Groups, Chrome Remote DevTools, remote Shells, and Knowledge retrieval.",
   "author": {
     "name": "SharpPS"
   },

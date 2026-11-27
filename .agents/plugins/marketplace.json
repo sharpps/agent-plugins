@@ -1,6 +1,6 @@
 {
   "$schema": "https://developers.openai.com/codex/schemas/marketplace.json",
-  "name": "sharpps-plugins",
+  "name": "sharpps-marketplace",
   "description": "SharpPS framework skills for Sitecore, Liferay, .NET, and general engineering/documentation workflows.",
   "plugins": [
     {

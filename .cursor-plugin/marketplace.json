@@ -1,10 +1,10 @@
 {
-  "name": "sharpps-plugins",
+  "name": "sharpps-marketplace",
   "owner": {
     "name": "SharpPS"
   },
   "metadata": {
-    "description": "SharpPS skills for Cursor, Claude, Codex, Grok, and other agents. Skills are not duplicated — each host references plugins/*/skills/."
+    "description": "SharpPS skills for Cursor, Claude, Codex, Grok, and other agents. Skills are not duplicated \u2014 each host references plugins/*/skills/."
   },
   "plugins": [
     {
